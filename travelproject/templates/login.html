@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN PAGE</title>
+    <style>
+        label { color:Powder Blue;width:150px;display:inline-bock;}
+        body {background-color:Pink;}
+        input {background-color:Powder Blue;}
+    </style>
+</head>
+<body>
+<h1>Login Here</h1>
+<form action="login" method="post">
+    {% csrf_token %}
+    <label>User Name :</label>
+    <input type="text" name="username" placeholder="Enter your username"><br>
+    <pre></pre>
+     <label>Password :</label>
+    <input type="password" name="password" placeholder="Enter your password"><br>
+    <pre></pre>
+    <input type="submit">
+</form>
+{% for msg in messages %}
+<p>{{msg}}</p>
+{% endfor %}}
+
+</body>
+</html>
